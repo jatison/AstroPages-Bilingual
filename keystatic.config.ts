@@ -7,7 +7,7 @@ export default config({
     process.env.NODE_ENV === 'production' || import.meta.env?.PROD
       ? {
           kind: 'github',
-          repo: 'YOUR_GITHUB_USERNAME/bilingual-blog',
+          repo: 'jatison/AstroPages-Bilingual',
         }
       : {
           kind: 'local',
@@ -26,12 +26,12 @@ export default config({
         featured: fields.checkbox({ label: '推荐文章', defaultValue: false }),
         tags: fields.array(
           fields.text({ label: '标签' }),
-          { 
+          {
             label: '标签',
             itemLabel: props => props.value
           }
         ),
-        content: fields.markdoc({ 
+        content: fields.markdoc({
           label: '正文',
           extension: 'md'
         }),
@@ -50,12 +50,12 @@ export default config({
         featured: fields.checkbox({ label: 'Featured', defaultValue: false }),
         tags: fields.array(
           fields.text({ label: 'Tags' }),
-          { 
+          {
             label: 'Tags',
             itemLabel: props => props.value
           }
         ),
-        content: fields.markdoc({ 
+        content: fields.markdoc({
           label: 'Content',
           extension: 'md'
         }),
